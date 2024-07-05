@@ -17,7 +17,11 @@ amber.campaigns(a)
 amber.campaigns(a, study = "liftup")
 amber.campaign(a, id = "base")
 
+# Find all participants
 amber.participants(a)
+# Find participants that are not eligible
+amber.participants(a, valid = FALSE)
+# Find participants from specific study or campaign
 amber.participants(a, study = "liftup")
 amber.participants(a, campaign = "base")
 amber.participant(a, "9WVV87")
@@ -31,7 +35,9 @@ amber.participant(a, "9WVV87")
 # Find all interviews
 amber.interviews(a)
 # Find all completed interviews
-amber.interviews(a, query = list(state = "completed"))
+amber.interviews(a, state = "completed")
+# Find all interviews in progress and which participant is not valid any more
+amber.interviews(a, state = "in_progress", participantValid = FALSE)
 # Find all interviews of an interview designs
 amber.interviews(a, interviewDesign = "treocapa_lt")
 
@@ -42,7 +48,10 @@ amber.interviews(a, interviewDesign = "treocapa_lt")
 #
 # Export data from all interviews
 amber.interview_export(a)
-amber.interview_export(a, query = list(state = "completed"))
+# Export data from completed interviews
+amber.interview_export(a, state = "completed")
+# Export data from interviews in progress and which participant is not valid any more
+amber.interview_export(a, state = "in_progress", participantValid = FALSE)
 # Export data from all interviews in a range of time
 amber.interview_export(a, from = "2022-01-12 00:00", to = "2023-12-31")
 # Export data from all interviews for a specific participant/patient study identifier

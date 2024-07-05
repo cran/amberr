@@ -11,6 +11,7 @@ amber.participants(
   campaign = NULL,
   code = NULL,
   identifier = NULL,
+  valid = NULL,
   query = list(),
   skip = 0,
   limit = 100,
@@ -28,7 +29,9 @@ amber.participants(
 
 \item{code}{Participant interview code, optional}
 
-\item{identifier}{Patient/participant identifier, optional}
+\item{identifier}{Participant identifier, optional}
+
+\item{valid}{Participant is valid (logical): active and in the valid date range}
 
 \item{query}{A search query}
 
@@ -66,18 +69,18 @@ amber.logout(a)
 }
 \seealso{
 Other studies functions: 
-\code{\link{amber.campaigns}()},
 \code{\link{amber.campaign}()},
+\code{\link{amber.campaigns}()},
 \code{\link{amber.case_report_export}()},
-\code{\link{amber.case_report_forms}()},
 \code{\link{amber.case_report_form}()},
+\code{\link{amber.case_report_forms}()},
 \code{\link{amber.case_reports}()},
-\code{\link{amber.form_revisions}()},
-\code{\link{amber.form_revision}()},
-\code{\link{amber.forms}()},
 \code{\link{amber.form}()},
-\code{\link{amber.interview_designs}()},
+\code{\link{amber.form_revision}()},
+\code{\link{amber.form_revisions}()},
+\code{\link{amber.forms}()},
 \code{\link{amber.interview_design}()},
+\code{\link{amber.interview_designs}()},
 \code{\link{amber.interview_export}()},
 \code{\link{amber.interviews}()},
 \code{\link{amber.participant}()},

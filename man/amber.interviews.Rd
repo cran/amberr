@@ -13,6 +13,8 @@ amber.interviews(
   to = NULL,
   code = NULL,
   identifier = NULL,
+  state = NULL,
+  participantValid = NULL,
   query = list(),
   skip = 0,
   limit = 100,
@@ -34,7 +36,11 @@ amber.interviews(
 
 \item{code}{Participant interview code, optional}
 
-\item{identifier}{Patient/participant identifier, optional}
+\item{identifier}{Participant identifier, optional}
+
+\item{state}{State of the interview: 'initiated', 'in_progress', 'completed'}
+
+\item{participantValid}{Participant is valid (logical): active and in the valid date range}
 
 \item{query}{A search query}
 
@@ -78,21 +84,21 @@ amber.logout(a)
 }
 \seealso{
 Other studies functions: 
-\code{\link{amber.campaigns}()},
 \code{\link{amber.campaign}()},
+\code{\link{amber.campaigns}()},
 \code{\link{amber.case_report_export}()},
-\code{\link{amber.case_report_forms}()},
 \code{\link{amber.case_report_form}()},
+\code{\link{amber.case_report_forms}()},
 \code{\link{amber.case_reports}()},
-\code{\link{amber.form_revisions}()},
-\code{\link{amber.form_revision}()},
-\code{\link{amber.forms}()},
 \code{\link{amber.form}()},
-\code{\link{amber.interview_designs}()},
+\code{\link{amber.form_revision}()},
+\code{\link{amber.form_revisions}()},
+\code{\link{amber.forms}()},
 \code{\link{amber.interview_design}()},
+\code{\link{amber.interview_designs}()},
 \code{\link{amber.interview_export}()},
-\code{\link{amber.participants}()},
 \code{\link{amber.participant}()},
+\code{\link{amber.participants}()},
 \code{\link{amber.studies}()},
 \code{\link{amber.study}()}
 }
