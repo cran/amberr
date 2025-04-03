@@ -18,6 +18,7 @@ amber.interviews(
   query = list(),
   skip = 0,
   limit = 100,
+  mergeUpdatedFillingDates = FALSE,
   df = TRUE
 )
 }
@@ -47,6 +48,8 @@ amber.interviews(
 \item{skip}{Number of items to skip}
 
 \item{limit}{Max number of items}
+
+\item{mergeUpdatedFillingDates}{Set the last update date as being the filling date, if filling date is empty (default is FALSE).}
 
 \item{df}{Return a data.frame (default is TRUE)}
 }
@@ -97,6 +100,9 @@ Other studies functions:
 \code{\link{amber.interview_design}()},
 \code{\link{amber.interview_designs}()},
 \code{\link{amber.interview_export}()},
+\code{\link{amber.interviews_step_actions}()},
+\code{\link{amber.interviews_step_data}()},
+\code{\link{amber.interviews_steps}()},
 \code{\link{amber.participant}()},
 \code{\link{amber.participants}()},
 \code{\link{amber.studies}()},
